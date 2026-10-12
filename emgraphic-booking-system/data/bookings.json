@@ -1,0 +1,61 @@
+[
+  {
+    "id": "book_1791460279055_s473j",
+    "referenceCode": "EM-8845",
+    "clientSecret": "sec_1791460279055_rf9rzbrf",
+    "clientName": "Leyla Qasımova",
+    "clientPhone": "+994 50 444 33 22",
+    "photoshootType": "1 dekor (20-25 kadr fotoşəkil)",
+    "date": "2026-10-09",
+    "timeSlot": "18:00",
+    "notes": "",
+    "status": "confirmed",
+    "createdAt": "2026-10-08T11:51:19.055Z",
+    "clientIp": "::ffff:127.0.0.1",
+    "completedAt": "2026-10-08T16:59:58.516Z",
+    "cancelledBy": null
+  },
+  {
+    "id": "book_1791460217784_fehh6",
+    "referenceCode": "EM-5010",
+    "clientSecret": "sec_1791460217784_afhbt69n",
+    "clientName": "Səbinə Əliyeva",
+    "clientPhone": "+994 50 777 88 99",
+    "photoshootType": "1 dekor (20-25 kadr fotoşəkil)",
+    "date": "2026-10-08",
+    "timeSlot": "17:00",
+    "notes": "",
+    "status": "confirmed",
+    "createdAt": "2026-10-08T11:50:17.784Z",
+    "clientIp": "::ffff:127.0.0.1"
+  },
+  {
+    "id": "book_1791386595441_5zpaz",
+    "referenceCode": "EM-8134",
+    "clientSecret": "sec_1791386595441_lrlckzxk",
+    "clientName": "Günel Həsənova",
+    "clientPhone": "+994 77 987 65 43",
+    "photoshootType": "2 dekor: 30 AZN (30-35 kadr fotoşəkil)",
+    "date": "2026-10-09",
+    "timeSlot": "15:00",
+    "notes": "",
+    "status": "confirmed",
+    "createdAt": "2026-10-07T15:23:15.441Z",
+    "clientIp": "::ffff:127.0.0.1"
+  },
+  {
+    "id": "book_1791386459937_zbyzo",
+    "referenceCode": "EM-1503",
+    "clientSecret": "sec_1791386459937_1hjo2xs7",
+    "clientName": "Test Müştəri",
+    "clientPhone": "+994 50 123 45 67",
+    "photoshootType": "1 dekor (20-25 kadr fotoşəkil)",
+    "date": "2026-10-08",
+    "timeSlot": "12:00",
+    "notes": "",
+    "status": "confirmed",
+    "createdAt": "2026-10-07T15:20:59.937Z",
+    "deviceId": "test_dev_1",
+    "clientIp": "::ffff:127.0.0.1"
+  }
+]

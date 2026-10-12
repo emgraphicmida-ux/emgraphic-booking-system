@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-serif: "Times New Roman", Times, Baskerville, Georgia, serif;
+  --font-mono: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --font-heading: "Times New Roman", Times, Baskerville, Georgia, serif;
+    --font-body: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+
+  html, body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #0f172a;
+    overflow-x: hidden;
+  }
+
+  /* Başlıqlar: Bütün başlıqlar Times New Roman şrifti ilə */
+  h1, h2, h3, h4, h5, h6, .font-display, .font-heading, [data-heading="true"] {
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif !important;
+    letter-spacing: normal;
+  }
+
+  /* Digər yazılar: Arial şrifti ilə */
+  p, span, div, a, button, input, textarea, select, label, table, tr, td, th {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+
+  /* Rəqəmlər və saatlar: Arial şrifti ilə */
+  .font-mono-num, .font-mono, [data-number="true"] {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbar for light background */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Silently handle Vite dev HMR websocket in cloud preview environment
+      (function() {
+        if (typeof window === 'undefined') return;
+        var OrigWS = window.WebSocket;
+        if (!OrigWS) return;
+        window.WebSocket = function(url, protocols) {
+          if (
+            protocols === 'vite-hmr' ||
+            protocols === 'vite-ping' ||
+            (typeof url === 'string' && (url.includes('vite-hmr') || url.includes('token=')))
+          ) {
+            var listeners = {};
+            var fakeWs = {
+              readyState: 1,
+              send: function() {},
+              close: function() {
+                fakeWs.readyState = 3;
+                if (listeners['close']) listeners['close'].forEach(function(fn) { fn({ wasClean: true }); });
+              },
+              addEventListener: function(event, handler) {
+                listeners[event] = listeners[event] || [];
+                listeners[event].push(handler);
+                if (event === 'open') {
+                  setTimeout(function() { handler({ type: 'open' }); }, 10);
+                }
+              },
+              removeEventListener: function(event, handler) {
+                if (!listeners[event]) return;
+                listeners[event] = listeners[event].filter(function(h) { return h !== handler; });
+              }
+            };
+            return fakeWs;
+          }
+          return new OrigWS(url, protocols);
+        };
+        window.WebSocket.prototype = OrigWS.prototype;
+      })();
+    </script>
+    <title>Emgraphic Studio - Onlayn Çəkiliş Təqvimi və Bron Sistemi</title>
+    <meta name="description" content="Emgraphic Studio üçün peşəkar onlayn çəkiliş təqvimi, dinamik saat kilidlənməsi, müştəri müraciət forması və inzibatçı (admin) idarəetmə paneli." />
+    <meta property="og:title" content="Emgraphic Studio - Onlayn Çəkiliş Təqvimi və Bron Sistemi" />
+    <meta property="og:description" content="Emgraphic Studio üçün peşəkar onlayn çəkiliş təqvimi, dinamik saat kilidlənməsi, müştəri müraciət forması və inzibatçı (admin) idarəetmə paneli." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body class="bg-white text-slate-800 selection:bg-amber-100 selection:text-amber-900 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
