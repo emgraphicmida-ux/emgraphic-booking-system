@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.local
+logs/
+.qa/
+.preview*
+/data/
+.private-recovery/
+oracle-release/

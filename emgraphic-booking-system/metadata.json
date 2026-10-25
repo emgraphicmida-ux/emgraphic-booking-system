@@ -1,0 +1,6 @@
+{
+  "name": "Emgraphic Studio - Onlayn Çəkiliş Təqvimi və Bron Sistemi",
+  "description": "Emgraphic Studio üçün peşəkar onlayn çəkiliş təqvimi, dinamik saat kilidlənməsi, müştəri müraciət forması və inzibatçı (admin) idarəetmə paneli.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
